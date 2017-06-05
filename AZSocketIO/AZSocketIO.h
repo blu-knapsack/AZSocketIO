@@ -46,10 +46,10 @@ typedef enum {
     AZSocketIOStateConnected,
 } AZSocketIOState;
 
-NS_ENUM(NSUInteger, AZSocketIOError) {
-    AZSocketIOErrorConnection   = 100,
-    AZSocketIOErrorArgs         = 3000,
-};
+typedef enum {
+    AZSocketIOErrorConnection = 100,
+    AZSocketIOErrorArgs = 3000,
+} AZSocketIOError;
 
 /**
  `AZSocketIO` provides a mechanism for connecting to and interacting with a socket.io compliant server. It maintains the actual transport connection and provides facilities for sending all types of messages.
